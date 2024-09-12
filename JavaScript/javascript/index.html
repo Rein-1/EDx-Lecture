@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Javascript</title>
+
+    <script>
+
+        let counter =0;
+        function hello() {
+            alert('Hello, World!');
+        }
+
+        function hellow() {
+            const header = document.querySelector('h1');
+            if (header.innerHTML === 'Hello!') {
+                header.innerHTML = 'Goodbye!';
+            } else {
+                header.innerHTML = 'Hello!';
+            }
+        } 
+
+        function count() {
+            counter++;
+            document.querySelector('h2').innerHTML = counter;
+            if (counter % 10 === 0) {
+                alert(`Count is now ${counter}`)
+            }
+        }
+    </script>
+
+</head>
+<body>
+    <h1>What could it be?</h1>
+    <h2>0</h2>
+    <button onclick="hello()">Click Me!</button>
+    <button onclick="count()">Count</button>
+    <button onclick="hellow()">Header</button>
+</body>
+</html>
